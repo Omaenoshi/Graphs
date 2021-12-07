@@ -39,6 +39,7 @@ namespace GrapghBuilder
             newTop.El.bTop.Child = newTop.El.tTop;
             main.Children.Add(newTop.El.bTop);
             i++;
+            Logic.GraphSchema.currentGraph.Add(newTop);
         }
 
         private void DeleteTop(object sender, MouseButtonEventArgs e)
@@ -53,7 +54,22 @@ namespace GrapghBuilder
                 TextBlock activeBd = (TextBlock)e.OriginalSource;
                 main.Children.Remove((Border)activeBd.Parent);
             }
+        }
+        static Line ln = new Line() { StrokeThickness = 5, Stroke = Brushes.Black};
 
+        private void CreateEdge(object sender, MouseButtonEventArgs e)
+        {
+            ln.X1 = Mouse.GetPosition(main).X;
+            ln.Y1 = Mouse.GetPosition(main).Y;
+            
+        }
+
+        private void EndEdge(object sender, MouseButtonEventArgs e)
+        {
+            ln.X2 = Mouse.GetPosition(main).X;
+            ln.Y2 = Mouse.GetPosition(main).Y;
+
+            main.Children.Add(ln);
         }
     }
 }
