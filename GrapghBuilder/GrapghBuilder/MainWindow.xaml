@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800">
     <Grid>
-        <Canvas x:Name="main" Background="Transparent" MouseDown="ImageMouseDown"></Canvas>
+        <Canvas x:Name="main" Background="Transparent" MouseLeftButtonDown="ImageMouseDown"
+                MouseRightButtonDown="DeleteTopper" ></Canvas>
     </Grid>
 </Window>
