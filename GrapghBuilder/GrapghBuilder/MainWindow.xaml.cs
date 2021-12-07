@@ -23,43 +23,37 @@ namespace GrapghBuilder
         public MainWindow()
         {
             InitializeComponent();
+            
         }
-        private void ImageMouseDown(object sender, MouseButtonEventArgs e)
+        int i = 0;
+        private void CreateTop(object sender, MouseButtonEventArgs e)
         {
-            int i = 0;
-            
-            var pos = e.GetPosition((IInputElement)sender);
-            TextBlock text = new TextBlock()
-            {
-                FontSize = 20,
-                Foreground = Brushes.Black
-            };
-            
-            //text.Name = i.ToString();
-            Logic.GraphTopper top = new Logic.GraphTopper(i.ToString(), new List<Logic.GraphEdge>(), new Ellipse(){ Width = 50,
-            Height = 50, Fill = Brushes.Gray, Name = "ellipse"});
-            Canvas.SetLeft(top.El, pos.X - 17);
-            Canvas.SetTop(top.El, pos.Y - 11);
-            Canvas.SetLeft(text, pos.X );
-            Canvas.SetTop(text, pos.Y);
-            main.Children.Add(top.El);
-            main.Children.Add(text);
-            sdfsd(top);
+            var curPoint = Mouse.GetPosition(main);
+            GraphTopper newTop = new GraphTopper(" ", new List<GraphEdge>(),
+            new Views.TopElem(new Border() {Width = 50, Height = 50, CornerRadius = new CornerRadius(90), Background = Brushes.Gray }, 
+            new TextBlock() { Text = i.ToString(), Foreground = Brushes.White, FontSize = 14, VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center}));
+            Canvas.SetLeft(newTop.El.bTop, curPoint.X - 17);
+            Canvas.SetTop(newTop.El.bTop, curPoint.Y - 11);
+            Canvas.SetLeft(newTop.El.tTop, curPoint.X + 1);
+            Canvas.SetTop(newTop.El.tTop, curPoint.Y );
+            newTop.El.bTop.Child = newTop.El.tTop;
+            main.Children.Add(newTop.El.bTop);
             i++;
         }
 
-        private void sdfsd(Logic.GraphTopper top)
+        private void DeleteTop(object sender, MouseButtonEventArgs e)
         {
-            GraphSchema.currentGraph.Add(top);
-        }
-
-        private void DeleteTopper(object sender, MouseButtonEventArgs e)
-        {
-            if (e.OriginalSource is Ellipse)
+            if(e.OriginalSource is Border)
             {
-                Ellipse activeEllipse = (Ellipse) e.OriginalSource;
-                main.Children.Remove(activeEllipse);
+                Border activeBd = (Border)e.OriginalSource;
+                main.Children.Remove(activeBd);
             }
+            else
+            {
+                TextBlock activeBd = (TextBlock)e.OriginalSource;
+                main.Children.Remove((Border)activeBd.Parent);
+            }
+
         }
     }
 }

@@ -11,9 +11,9 @@ namespace GrapghBuilder.Logic
     {
         public string Name { get; set; }
         public List<GraphEdge> Edges { get; set; }
-        public Ellipse El { get; set; }
+        public Views.TopElem El { get; set; }
 
-        public GraphTopper(string name, List<GraphEdge> edges, Ellipse el)
+        public GraphTopper(string name, List<GraphEdge> edges, Views.TopElem el)
         {
             Name = name;
             Edges = edges;

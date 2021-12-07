@@ -7,7 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="800">
     <Grid>
-        <Canvas x:Name="main" Background="Transparent" MouseLeftButtonDown="ImageMouseDown"
-                MouseRightButtonDown="DeleteTopper" ></Canvas>
+        <Canvas x:Name="main" Background="Transparent" MouseLeftButtonDown="CreateTop"
+                MouseRightButtonDown="DeleteTop"></Canvas>
+        <!--<Border CornerRadius="90" Background="Gray" Width="70" Height="70" Margin="344,286,379.6,414.4">
+            <TextBlock Text="50" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+        </Border>-->
     </Grid>
 </Window>
