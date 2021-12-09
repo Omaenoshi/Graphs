@@ -25,13 +25,28 @@ namespace GrapghBuilder
             InitializeComponent();
             
         }
-        int i = 0;
+        int i = 1;
         private void CreateTop(object sender, MouseButtonEventArgs e)
         {
             var curPoint = Mouse.GetPosition(main);
-            GraphTopper newTop = new GraphTopper(" ", new List<GraphEdge>(),
-            new Views.TopElem(new Border() {Width = 50, Height = 50, CornerRadius = new CornerRadius(90), Background = Brushes.Gray }, 
-            new TextBlock() { Text = i.ToString(), Foreground = Brushes.White, FontSize = 14, VerticalAlignment = VerticalAlignment.Center, HorizontalAlignment = HorizontalAlignment.Center}));
+            GraphTopper newTop = new GraphTopper($"_{i}", new List<GraphEdge>(),
+            new Views.TopElem(new Border()
+            {
+                Name = $"_{i}",
+                Width = 50,
+                Height = 50,
+                CornerRadius = new CornerRadius(90),
+                Background = Brushes.Gray
+            },
+            new TextBlock()
+            {
+                Name = $"_{i}",
+                Text = i.ToString(),
+                Foreground = Brushes.White,
+                FontSize = 14,
+                VerticalAlignment = VerticalAlignment.Center,
+                HorizontalAlignment = HorizontalAlignment.Center
+            }));
             Canvas.SetLeft(newTop.El.bTop, curPoint.X - 17);
             Canvas.SetTop(newTop.El.bTop, curPoint.Y - 11);
             Canvas.SetLeft(newTop.El.tTop, curPoint.X + 1);
@@ -48,28 +63,53 @@ namespace GrapghBuilder
             {
                 Border activeBd = (Border)e.OriginalSource;
                 main.Children.Remove(activeBd);
+                GraphSchema.currentGraph.Remove(FindTops(activeBd.Name));
             }
             else
             {
                 TextBlock activeBd = (TextBlock)e.OriginalSource;
                 main.Children.Remove((Border)activeBd.Parent);
+                GraphSchema.currentGraph.Remove(FindTops(((Border)activeBd.Parent).Name));
             }
         }
         static Line ln = new Line() { StrokeThickness = 5, Stroke = Brushes.Black};
-
+        static GraphTopper stGr = new GraphTopper(null,null,null);
         private void CreateEdge(object sender, MouseButtonEventArgs e)
         {
-            ln.X1 = Mouse.GetPosition(main).X;
-            ln.Y1 = Mouse.GetPosition(main).Y;
-            
+            if(e.OriginalSource is Border)
+            {
+                Border actbd = (Border)e.OriginalSource;
+                stGr = FindTops(actbd.Name);
+                ln.X1 = Mouse.GetPosition(main).X;
+                ln.Y1 = Mouse.GetPosition(main).Y;
+            }
+        }
+        private GraphTopper FindTops(string name)
+        {
+            GraphTopper top = new GraphTopper(null,null,null);
+            foreach(var c in GraphSchema.currentGraph)
+            {
+                if(c.Name == name)
+                {
+                    top = c;
+                    return top;
+                }
+            }
+            return top;
         }
 
         private void EndEdge(object sender, MouseButtonEventArgs e)
         {
-            ln.X2 = Mouse.GetPosition(main).X;
-            ln.Y2 = Mouse.GetPosition(main).Y;
+            if(e.OriginalSource is Border)
+            {
+                Border actbd = (Border)e.OriginalSource;
 
-            main.Children.Add(ln);
+                ln.X2 = Mouse.GetPosition(main).X;
+                ln.Y2 = Mouse.GetPosition(main).Y;
+
+                stGr.Edges.Add(new GraphEdge(0, FindTops(actbd.Name)));
+                main.Children.Add(ln);
+            }
         }
     }
 }
