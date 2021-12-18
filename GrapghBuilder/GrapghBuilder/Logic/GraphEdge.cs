@@ -1,6 +1,6 @@
 ﻿namespace GrapghBuilder.Logic
 {
-    class GraphEdge
+    public class GraphEdge
     {
         public int Weight { get; set; }
         public GraphTopper ConnectedTop { get; set; }

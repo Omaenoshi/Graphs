@@ -7,7 +7,7 @@ using System.Windows.Shapes;
 
 namespace GrapghBuilder.Logic
 {
-    class GraphTopper
+    public class GraphTopper
     {
         public string Name { get; set; }
         public List<GraphEdge> Edges { get; set; }

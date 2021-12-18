@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GrapghBuilder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="Graph_Builder" Height="600" Width="700">
     <Grid>
-        <Canvas x:Name="main" Background="Transparent" MouseRightButtonUp="CreateTop" MouseLeftButtonDown="CreateEdge" MouseLeftButtonUp="EndEdge"/>
+        <Canvas x:Name="main" Background="Transparent"
+                MouseRightButtonDown="DeleteTop"
+                MouseLeftButtonDown="CreateEdge" 
+                MouseLeftButtonUp="EndEdge"/>
     </Grid>
 </Window>
