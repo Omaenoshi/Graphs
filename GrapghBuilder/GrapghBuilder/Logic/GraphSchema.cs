@@ -4,9 +4,16 @@ using System.IO;
 
 namespace GrapghBuilder.Logic
 {
-    internal class GraphSchema
+    public class GraphSchema
     {
         public static List<GraphTopper> currentGraph = new List<GraphTopper>();
+        
+        public List<GraphTopper> Toppers { get; }
+
+        public GraphSchema()
+        {
+            Toppers = new List<GraphTopper>();
+        }
 
         public void GraphParse(string path)
         {
@@ -25,7 +32,7 @@ namespace GrapghBuilder.Logic
                     if (row[j] != "0")
                     {
                         var weight = int.Parse(row[j]);
-                        currentGraph[i - 1].Edges.Add(new GraphEdge(weight, currentGraph[j - 1]));
+                        Toppers[i - 1].Edges.Add(new GraphEdge(weight, Toppers[j - 1]));
                     }
                 }
             }
@@ -36,7 +43,7 @@ namespace GrapghBuilder.Logic
             foreach (var topper in toppers)
             {
                 if (topper!=" ")
-                    currentGraph.Add(new GraphTopper(topper, new List<GraphEdge>(), null));
+                    Toppers.Add(new GraphTopper(topper, new List<GraphEdge>(), null));
             }
         }
     }
