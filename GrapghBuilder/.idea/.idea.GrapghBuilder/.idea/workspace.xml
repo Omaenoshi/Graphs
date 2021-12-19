@@ -4,7 +4,10 @@
     <projectFile>GrapghBuilder/GrapghBuilder.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4162759-13e3-46a0-bd78-51176b827a82" name="Changes" comment="started to write algoritms" />
+    <list default="true" id="f4162759-13e3-46a0-bd78-51176b827a82" name="Changes" comment="started to write algoritms">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrapghBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GrapghBuilder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrapghBuilder/Temporary/Input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/Temporary/Input.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639945655078</updated>
       <workItem from="1639945674886" duration="199000" />
-      <workItem from="1639945989133" duration="1084000" />
+      <workItem from="1639945989133" duration="1880000" />
     </task>
     <task id="LOCAL-00001" summary="started to write algoritms">
       <created>1639946807000</created>
@@ -108,16 +111,42 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml.cs</url>
-          <line>27</line>
+          <line>28</line>
           <properties documentPath="C:\Users\Максим.DESKTOP-NKDFPI1\Documents\GitHub\Graphs\GrapghBuilder\GrapghBuilder\MainWindow.xaml.cs" initialLine="28" containingFunctionPresentation="constructor 'MainWindow'">
             <startOffsets>
-              <option value="755" />
+              <option value="823" />
             </startOffsets>
             <endOffsets>
               <option value="824" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml.cs</url>
+          <line>27</line>
+          <properties documentPath="C:\Users\Максим.DESKTOP-NKDFPI1\Documents\GitHub\Graphs\GrapghBuilder\GrapghBuilder\MainWindow.xaml.cs" initialLine="27" containingFunctionPresentation="constructor 'MainWindow'">
+            <startOffsets>
+              <option value="759" />
+            </startOffsets>
+            <endOffsets>
+              <option value="814" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/GrapghBuilder/Logic/Algorithms.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\Users\Максим.DESKTOP-NKDFPI1\Documents\GitHub\Graphs\GrapghBuilder\GrapghBuilder\Logic\Algorithms.cs" initialLine="29" containingFunctionPresentation="method 'DFS'">
+            <startOffsets>
+              <option value="929" />
+            </startOffsets>
+            <endOffsets>
+              <option value="930" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
