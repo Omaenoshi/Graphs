@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Logic\Algorithms.cs" />
     <Compile Include="Logic\TempParams.cs" />
     <Compile Include="Views\TopElem.cs" />
     <Compile Include="Windows\GetWeight.xaml.cs">
