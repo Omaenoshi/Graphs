@@ -28,5 +28,30 @@ namespace GrapghBuilder.Logic
 
             return visited[visited.Count - 1];
         }
+
+        public static GraphTopper BFS(GraphSchema graph, GraphTopper startTopper)
+        {
+            var visited = new List<GraphTopper>();
+            var queue = new Queue<GraphTopper>();
+            queue.Enqueue(startTopper);
+
+            while (queue.Count > 0)
+            {
+                var currentTopper = queue.Dequeue();
+                if(visited.Contains(currentTopper))
+                    continue;
+                
+                visited.Add(currentTopper);
+                
+                var index = graph.Toppers.IndexOf(currentTopper);
+                foreach (var neighbour in graph.Toppers[index].Edges)
+                {
+                    if (!visited.Contains(neighbour.ConnectedTop))
+                        queue.Enqueue(neighbour.ConnectedTop);
+                }
+            }
+
+            return visited[visited.Count - 1];
+        }
     }
 }

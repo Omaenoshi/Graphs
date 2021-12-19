@@ -4,9 +4,9 @@
     <projectFile>GrapghBuilder/GrapghBuilder.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4162759-13e3-46a0-bd78-51176b827a82" name="Changes" comment="started to write algoritms">
+    <list default="true" id="f4162759-13e3-46a0-bd78-51176b827a82" name="Changes" comment="upd input">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GrapghBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GrapghBuilder/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrapghBuilder/Temporary/Input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/Temporary/Input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrapghBuilder/Logic/Algorithms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/Logic/Algorithms.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +16,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/29a6c1945f57447495fcad42118554c7363d00/61/7c81d37e/Stack`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="22WFt3I66AfJcz5iYl6SY7dVwmH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -60,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639945655078</updated>
       <workItem from="1639945674886" duration="199000" />
-      <workItem from="1639945989133" duration="1880000" />
+      <workItem from="1639945989133" duration="3710000" />
     </task>
     <task id="LOCAL-00001" summary="started to write algoritms">
       <created>1639946807000</created>
@@ -69,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639946807000</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="upd input">
+      <created>1639948032850</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639948032851</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,7 +114,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="started to write algoritms" />
-    <option name="LAST_COMMIT_MESSAGE" value="started to write algoritms" />
+    <MESSAGE value="upd input" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -134,19 +145,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/GrapghBuilder/Logic/Algorithms.cs</url>
-          <line>29</line>
-          <properties documentPath="C:\Users\Максим.DESKTOP-NKDFPI1\Documents\GitHub\Graphs\GrapghBuilder\GrapghBuilder\Logic\Algorithms.cs" initialLine="29" containingFunctionPresentation="method 'DFS'">
-            <startOffsets>
-              <option value="929" />
-            </startOffsets>
-            <endOffsets>
-              <option value="930" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

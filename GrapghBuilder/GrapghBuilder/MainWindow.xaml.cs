@@ -25,7 +25,7 @@ namespace GrapghBuilder
             InitializeComponent();
             GraphSchema schema = new GraphSchema();
             schema.GraphParse("../../Temporary/Input.txt");
-            var topper = Algorithms.DFS(schema, schema.Toppers[0]);
+            var topper = Algorithms.BFS(schema, schema.Toppers[0]);
         }
         int i = 0;
         public static GraphTopper stGr { get; set; } = new GraphTopper(null, null, null);
