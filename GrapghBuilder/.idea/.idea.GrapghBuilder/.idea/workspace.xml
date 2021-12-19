@@ -4,12 +4,7 @@
     <projectFile>GrapghBuilder/GrapghBuilder.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4162759-13e3-46a0-bd78-51176b827a82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GrapghBuilder/Logic/Algorithms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrapghBuilder/GrapghBuilder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/GrapghBuilder.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrapghBuilder/Logic/GraphSchema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/Logic/GraphSchema.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml.cs" afterDir="false" />
-    </list>
+    <list default="true" id="f4162759-13e3-46a0-bd78-51176b827a82" name="Changes" comment="started to write algoritms" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +21,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3498452" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -60,8 +57,16 @@
       <option name="presentableId" value="Default" />
       <updated>1639945655078</updated>
       <workItem from="1639945674886" duration="199000" />
-      <workItem from="1639945989133" duration="732000" />
+      <workItem from="1639945989133" duration="1084000" />
     </task>
+    <task id="LOCAL-00001" summary="started to write algoritms">
+      <created>1639946807000</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639946807000</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,7 +86,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/Omaenoshi'sbranch" />
                       </list>
                     </value>
                   </entry>
@@ -95,16 +100,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="started to write algoritms" />
+    <option name="LAST_COMMIT_MESSAGE" value="started to write algoritms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml.cs</url>
-          <line>28</line>
+          <line>27</line>
           <properties documentPath="C:\Users\Максим.DESKTOP-NKDFPI1\Documents\GitHub\Graphs\GrapghBuilder\GrapghBuilder\MainWindow.xaml.cs" initialLine="28" containingFunctionPresentation="constructor 'MainWindow'">
             <startOffsets>
-              <option value="823" />
+              <option value="755" />
             </startOffsets>
             <endOffsets>
               <option value="824" />
