@@ -23,6 +23,8 @@ namespace GrapghBuilder
         public MainWindow()
         {
             InitializeComponent();
+            GraphSchema schema = new GraphSchema();
+            schema.GraphParse("../../Temporary/Input.txt");
         }
         int i = 0;
         public static GraphTopper stGr { get; set; } = new GraphTopper(null, null, null);
