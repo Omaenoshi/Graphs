@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -20,15 +21,17 @@ namespace GrapghBuilder.Logic
 
                 visited.Add(currentTopper);
                 cur.Background = Brushes.Red;
+
+                Thread.Sleep(1000);
                 var index = graph.Toppers.IndexOf(currentTopper);
                 foreach (var neighbour in graph.Toppers[index].Edges)
                 {
                     if (!visited.Contains(neighbour.ConnectedTop))
                         stack.Push(neighbour.ConnectedTop);
                 }
-                cur.Background = Brushes.Gray;
+               // 
             }
-
+           // cur.Background = Brushes.Gray;
             return visited[visited.Count - 1];
         }
     }

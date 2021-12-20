@@ -20,7 +20,7 @@ namespace GrapghBuilder
     /*обхода взвешенного графа в ширину и глубину*/
     public partial class MainWindow : Window
     {
-        private GraphSchema schema = new GraphSchema();
+        private static GraphSchema schema = new GraphSchema();
         public MainWindow()
         {
             InitializeComponent();
@@ -109,10 +109,10 @@ namespace GrapghBuilder
 
                     ln.X2 = Mouse.GetPosition(main).X;
                     ln.Y2 = Mouse.GetPosition(main).Y;
-                    Windows.GetWeight gw = new Windows.GetWeight(main);
+                    Windows.GetWeight gw = new Windows.GetWeight(main, actbd.Name);
                     gw.Show();
-                    gw.NAMEE = actbd.Name;
-
+                   // Windows.GetWeight.NAMEE = actbd.Name;
+                    //FindTops(actbd.Name).Edges.Add(gw.curEdge);
                     // stGr.Edges.Add(new GraphEdge(0, FindTops(actbd.Name)));
                     //
                     // main.Children.Add(ln);
@@ -120,7 +120,7 @@ namespace GrapghBuilder
                 }
             }
         }
-        public GraphTopper FindTops(string name)
+        public static GraphTopper FindTops(string name)
         {
             GraphTopper top = new GraphTopper(null, null, null);
             foreach (var c in schema.Toppers)

@@ -16,21 +16,27 @@ namespace GrapghBuilder.Windows
 {
     public partial class GetWeight : Window
     {
-        public GetWeight(Canvas canvas)
+        public GetWeight(Canvas canvas, string crName)
         {
             InitializeComponent();
             myCanvas = canvas;
+            CrName = crName;
         }
+        public string CrName { get; private set; }
         public bool IsClosed { get; private set; }
         public int Weight { get; private set; }
-        public string NAMEE { get; set; }
+        public static string NAMEE { get; set; }
+
         private Canvas myCanvas;
+        public Logic.GraphEdge curEdge { get; set; } = new Logic.GraphEdge(0, null);
         private void get(object sender, RoutedEventArgs e)
         {
             Weight = int.Parse(tbWeight.Text);
 
             MainWindow main1 = new MainWindow();
-            MainWindow.stGr.Edges.Add(new Logic.GraphEdge(Weight, main1.FindTops(NAMEE)));
+            MainWindow.stGr.Edges.Add(new Logic.GraphEdge(Weight, MainWindow.FindTops(CrName)));
+            //curEdge = new Logic.GraphEdge(Weight, MainWindow.FindTops(CrName));
+            MainWindow.FindTops(CrName).Edges.Add(new Logic.GraphEdge(Weight, MainWindow.stGr));
 
             myCanvas.Children.Add(MainWindow.ln);
             main1.IsClicked = false;
