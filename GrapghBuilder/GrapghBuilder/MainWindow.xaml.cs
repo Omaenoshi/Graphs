@@ -20,12 +20,12 @@ namespace GrapghBuilder
     /*обхода взвешенного графа в ширину и глубину*/
     public partial class MainWindow : Window
     {
+        private GraphSchema schema = new GraphSchema();
         public MainWindow()
         {
             InitializeComponent();
-            GraphSchema schema = new GraphSchema();
-            schema.GraphParse("../../Temporary/Input.txt");
-            var topper = Algorithms.DFS(schema, schema.Toppers[0]);
+            // schema.GraphParse("../../Temporary/Input.txt");
+            // var topper = Algorithms.DFS(schema, schema.Toppers[0]);
         }
         int i = 0;
         public static GraphTopper stGr { get; set; } = new GraphTopper(null, null, null);
@@ -57,7 +57,7 @@ namespace GrapghBuilder
             newTop.El.bTop.Child = newTop.El.tTop;
             main.Children.Add(newTop.El.bTop);
             i++;
-            Logic.GraphSchema.currentGraph.Add(newTop);
+            schema.Toppers.Add(newTop);
         }
 
         private void DeleteTop(object sender, MouseButtonEventArgs e)
@@ -66,13 +66,13 @@ namespace GrapghBuilder
             {
                 Border activeBd = (Border)e.OriginalSource;
                 main.Children.Remove(activeBd);
-                GraphSchema.currentGraph.Remove(FindTops(activeBd.Name));
+                schema.Toppers.Remove(FindTops(activeBd.Name));
             }
             else
             {
                 TextBlock activeBd = (TextBlock)e.OriginalSource;
                 main.Children.Remove((Border)activeBd.Parent);
-                GraphSchema.currentGraph.Remove(FindTops(((Border)activeBd.Parent).Name));
+                schema.Toppers.Remove(FindTops(((Border)activeBd.Parent).Name));
             }
         }
 
@@ -109,21 +109,21 @@ namespace GrapghBuilder
 
                     ln.X2 = Mouse.GetPosition(main).X;
                     ln.Y2 = Mouse.GetPosition(main).Y;
-                    Windows.GetWeight gw = new Windows.GetWeight();
+                    Windows.GetWeight gw = new Windows.GetWeight(main);
                     gw.Show();
                     gw.NAMEE = actbd.Name;
 
-                    //stGr.Edges.Add(new GraphEdge(0, FindTops(actbd.Name)));
-
-                    //main.Children.Add(ln);
-                    //IsClicked = false;
+                    // stGr.Edges.Add(new GraphEdge(0, FindTops(actbd.Name)));
+                    //
+                    // main.Children.Add(ln);
+                    // IsClicked = false;
                 }
             }
         }
         public GraphTopper FindTops(string name)
         {
             GraphTopper top = new GraphTopper(null, null, null);
-            foreach (var c in GraphSchema.currentGraph)
+            foreach (var c in schema.Toppers)
             {
                 if (c.Name == name)
                 {
@@ -132,6 +132,22 @@ namespace GrapghBuilder
                 }
             }
             return top;
+        }
+
+        public Border FindBd(string name)
+        {
+            Border curBd = new Border();
+            foreach (var cur in main.Children.OfType<Border>())
+            {
+                if (name == cur.Name)
+                    curBd = cur;
+            }
+
+            return curBd;
+        }
+        private void dfs(object sender, RoutedEventArgs e)
+        {
+            Algorithms.DFS(schema, schema.Toppers[0], FindBd(schema.Toppers[0].Name));
         }
     }
 }

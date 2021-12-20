@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4162759-13e3-46a0-bd78-51176b827a82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GrapghBuilder/Logic/Algorithms.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrapghBuilder/GrapghBuilder.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/GrapghBuilder.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrapghBuilder/Logic/GraphSchema.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/Logic/GraphSchema.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GrapghBuilder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GrapghBuilder/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrapghBuilder/Logic/Algorithms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/Logic/Algorithms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrapghBuilder/Windows/GetWeight.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/Windows/GetWeight.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrapghBuilder/Windows/GetWeight.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrapghBuilder/Windows/GetWeight.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ceff7628a3d44498bf10ad5a5eeba982381988/fd/381d97c8/VisualCollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fd824cfb55004855b9e6d51b008c90e4568778/d6/f772c4f5/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="22WFt3I66AfJcz5iYl6SY7dVwmH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -26,6 +32,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -61,6 +69,7 @@
       <updated>1639945655078</updated>
       <workItem from="1639945674886" duration="199000" />
       <workItem from="1639945989133" duration="732000" />
+      <workItem from="1639983623334" duration="4606000" />
     </task>
     <servers />
   </component>
@@ -92,27 +101,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/GrapghBuilder/MainWindow.xaml.cs</url>
-          <line>28</line>
-          <properties documentPath="C:\Users\Максим.DESKTOP-NKDFPI1\Documents\GitHub\Graphs\GrapghBuilder\GrapghBuilder\MainWindow.xaml.cs" initialLine="28" containingFunctionPresentation="constructor 'MainWindow'">
-            <startOffsets>
-              <option value="823" />
-            </startOffsets>
-            <endOffsets>
-              <option value="824" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

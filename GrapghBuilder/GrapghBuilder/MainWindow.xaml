@@ -6,10 +6,16 @@
         xmlns:local="clr-namespace:GrapghBuilder"
         mc:Ignorable="d"
         Title="Graph_Builder" Height="600" Width="700">
-    <Grid>
-        <Canvas x:Name="main" Background="Transparent"
+    <DockPanel>
+        <Canvas Height="600" Width="550" DockPanel.Dock="Left" x:Name="main" Background="White"
                 MouseRightButtonDown="DeleteTop"
                 MouseLeftButtonDown="CreateEdge" 
                 MouseLeftButtonUp="EndEdge"/>
-    </Grid>
+        <Grid DockPanel.Dock="Right">
+            <Button Width="100" Height="50" Margin="0,-500,0,0" Click="dfs">Обход в глубину</Button>
+            <Button Width="100" Height="50" Margin="0,-350,0,0">Обход в ширину</Button>
+            <Button Width="100" Height="60" Margin="0,450,0,0">Загрузить из &#xa; матрицы &#xa;смежности</Button>
+        </Grid>
+       
+    </DockPanel>
 </Window>
